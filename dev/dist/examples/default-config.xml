@@ -1,0 +1,432 @@
+<model-config>
+<atoms>
+<!-- reference: http://physics.nist.gov -->
+  <atom name="H">
+    <isotope name="Hydrogen" massInDaltons="1.0078250321" probability="99.9885"/>
+    <isotope name="H2" massInDaltons="2.0141017780" probability="0.0115"/>
+  </atom>
+  <atom name="O">
+    <isotope name="O16" massInDaltons="15.9949146221" probability="99.757"/>
+    <isotope name="O17" massInDaltons="16.99913150" probability="0.038"/>
+    <isotope name="O18" massInDaltons="17.9991604" probability="0.205"/>
+  </atom>
+  <atom name="N">
+    <isotope name="N14" massInDaltons="14.0030740052" probability="99.632"/>
+    <isotope name="N15" massInDaltons="15.0001088984" probability="0.368"/>
+  </atom>
+  <atom name="C">
+    <isotope name="C12" massInDaltons="12.0000000" probability="98.93"/>
+    <isotope name="C13" massInDaltons="13.0033548378" probability="1.07"/>
+  </atom>
+  <atom name="P">
+    <isotope name="P31" massInDaltons="30.97376151" probability="100"/>
+  </atom>
+  <atom name="S">
+    <isotope name="S32" massInDaltons="31.97207069" probability="94.93"/>
+    <isotope name="S33" massInDaltons="32.97145850" probability="0.76"/>
+    <isotope name="S34" massInDaltons="33.96786683" probability="4.29"/>
+    <isotope name="S36" massInDaltons="35.96708088" probability="0.02"/>
+  </atom>
+</atoms>
+<!-- Residue reference: http://www.matrixscience.com/help/aa_help.html
+     pKa reference: Bjellqvist, B.,Hughes, G.J., Pasquali, Ch., Paquet, N., Ravier, F., Sanchez, J.-Ch., Frutiger, S. & Hochstrasser, D.F. The focusing positions of polypeptides in immobilized pH gradients can be predicted from their amino acid sequences. Electrophoresis 1993, 14, 1023-1031.   -->
+<residues>
+  <residue name="Alanine" oneLetter="A" threeLetter="Ala">
+    <pKa internal="0.00" nTerminus="7.59" cTerminus="3.55"/>
+    <contains atom="C" count="3"/>
+    <contains atom="H" count="5"/>
+    <contains atom="N" count="1"/>
+    <contains atom="O" count="1"/>
+  </residue>
+  <residue name="Arginine" oneLetter="R" threeLetter="Arg">
+    <pKa internal="12.00" nTerminus="7.50" cTerminus="3.55"/>
+    <contains atom="C" count="6"/>
+    <contains atom="H" count="12"/>
+    <contains atom="N" count="4"/>
+    <contains atom="O" count="1"/>
+  </residue>
+  <residue name="Asparagine" oneLetter="N" threeLetter="Asn">
+    <pKa internal="0.00" nTerminus="7.50" cTerminus="3.55"/>
+    <contains atom="C" count="4"/>
+    <contains atom="H" count="6"/>
+    <contains atom="N" count="2"/>
+    <contains atom="O" count="2"/>
+  </residue>
+  <residue name="Aspartic Acid" oneLetter="D" threeLetter="Asp">
+    <pKa internal="4.05" nTerminus="7.50" cTerminus="4.55"/>
+    <contains atom="C" count="4"/>
+    <contains atom="H" count="5"/>
+    <contains atom="N" count="1"/>
+    <contains atom="O" count="3"/>
+  </residue>
+  <residue name="Cysteine" oneLetter="C" threeLetter="Cys">
+    <pKa internal="9.0" nTerminus="7.50" cTerminus="3.55"/>
+    <contains atom="C" count="3"/>
+    <contains atom="H" count="5"/>
+    <contains atom="N" count="1"/>
+    <contains atom="O" count="1"/>
+    <contains atom="S" count="1"/>
+  </residue>
+  <residue name="Glutamic Acid" oneLetter="E" threeLetter="Glu">
+    <pKa internal="4.45" nTerminus="7.70" cTerminus="4.75"/>
+    <contains atom="C" count="5"/>
+    <contains atom="H" count="7"/>
+    <contains atom="N" count="1"/>
+    <contains atom="O" count="3"/>
+  </residue>
+  <residue name="Glutamine" oneLetter="Q" threeLetter="Gln">
+    <pKa internal="0.00" nTerminus="7.50" cTerminus="3.55"/>
+    <contains atom="C" count="5"/>
+    <contains atom="H" count="8"/>
+    <contains atom="N" count="2"/>
+    <contains atom="O" count="2"/>
+  </residue>
+  <residue name="Glycine" oneLetter="G" threeLetter="Gly">
+    <pKa internal="0.00" nTerminus="7.50" cTerminus="3.55"/>
+    <contains atom="C" count="2"/>
+    <contains atom="H" count="3"/>
+    <contains atom="N" count="1"/>
+    <contains atom="O" count="1"/>
+  </residue>
+  <residue name="Histidine" oneLetter="H" threeLetter="His">
+    <pKa internal="5.98" nTerminus="7.50" cTerminus="3.55"/>
+    <contains atom="C" count="6"/>
+    <contains atom="H" count="7"/>
+    <contains atom="N" count="3"/>
+    <contains atom="O" count="1"/>
+  </residue>
+  <residue name="Isoleucine" oneLetter="I" threeLetter="Ile">
+    <pKa internal="0.00" nTerminus="7.50" cTerminus="3.55"/>
+    <contains atom="C" count="6"/>
+    <contains atom="H" count="11"/>
+    <contains atom="N" count="1"/>
+    <contains atom="O" count="1"/>
+  </residue>
+  <residue name="Leucine" oneLetter="L" threeLetter="Leu">
+    <pKa internal="0.00" nTerminus="7.50" cTerminus="3.55"/>
+    <contains atom="C" count="6"/>
+    <contains atom="H" count="11"/>
+    <contains atom="N" count="1"/>
+    <contains atom="O" count="1"/>
+  </residue>
+  <residue name="Lysine" oneLetter="K" threeLetter="Lys">
+    <pKa internal="10.00" nTerminus="7.50" cTerminus="3.55"/>
+    <contains atom="C" count="6"/>
+    <contains atom="H" count="12"/>
+    <contains atom="N" count="2"/>
+    <contains atom="O" count="1"/>
+  </residue>
+  <residue name="Methionine" oneLetter="M" threeLetter="Met">
+    <pKa internal="0.00" nTerminus="7.00" cTerminus="3.55"/>
+    <contains atom="C" count="5"/>
+    <contains atom="H" count="9"/>
+    <contains atom="N" count="1"/>
+    <contains atom="O" count="1"/>
+    <contains atom="S" count="1"/>
+  </residue>
+  <residue name="Phenylalanine" oneLetter="F" threeLetter="Phe">
+    <pKa internal="0.00" nTerminus="7.50" cTerminus="3.55"/>
+    <contains atom="C" count="9"/>
+    <contains atom="H" count="9"/>
+    <contains atom="N" count="1"/>
+    <contains atom="O" count="1"/>
+  </residue>
+  <residue name="Proline" oneLetter="P" threeLetter="Pro">
+    <pKa internal="12.0" nTerminus="8.36" cTerminus="3.55"/>
+    <contains atom="C" count="5"/>
+    <contains atom="H" count="7"/>
+    <contains atom="N" count="1"/>
+    <contains atom="O" count="1"/>
+  </residue>
+  <residue name="Hydroxy-Proline" oneLetter="Z" threeLetter="ZPro">
+    <pKa internal="12.0" nTerminus="8.36" cTerminus="3.55"/>
+    <contains atom="C" count="5"/>
+    <contains atom="H" count="7"/>
+    <contains atom="N" count="1"/>
+    <contains atom="O" count="2"/>
+  </residue>
+  <residue name="Serine" oneLetter="S" threeLetter="Ser">
+    <pKa internal="0.00" nTerminus="6.93" cTerminus="3.55"/>
+    <contains atom="C" count="3"/>
+    <contains atom="H" count="5"/>
+    <contains atom="N" count="1"/>
+    <contains atom="O" count="2"/>
+  </residue>
+  <residue name="Threonine" oneLetter="T" threeLetter="Thr">
+    <pKa internal="0.00" nTerminus="6.82" cTerminus="3.55"/>
+    <contains atom="C" count="4"/>
+    <contains atom="H" count="7"/>
+    <contains atom="N" count="1"/>
+    <contains atom="O" count="2"/>
+ </residue>
+  <residue name="Tryptophan" oneLetter="W" threeLetter="Trp">
+    <pKa internal="0.00" nTerminus="7.50" cTerminus="3.55"/>
+    <contains atom="C" count="11"/>
+    <contains atom="H" count="10"/>
+    <contains atom="N" count="2"/>
+    <contains atom="O" count="1"/>
+  </residue>
+  <residue name="Tyrosine" oneLetter="Y" threeLetter="Tyr">
+    <pKa internal="10.00" nTerminus="7.50" cTerminus="3.55"/>
+    <contains atom="C" count="9"/>
+    <contains atom="H" count="9"/>
+    <contains atom="N" count="1"/>
+    <contains atom="O" count="2"/>
+  </residue>
+  <residue name="Valine" oneLetter="V" threeLetter="Val">
+    <pKa internal="0.00" nTerminus="7.50" cTerminus="3.55"/>
+    <contains atom="C" count="5"/>
+    <contains atom="H" count="9"/>
+    <contains atom="N" count="1"/>
+    <contains atom="O" count="1"/>
+  </residue>
+</residues>
+<!-- potential modifications to include -->
+<potentialModifications>
+  <!-- general n-terminus acetylation -->
+<!--
+  <potentialModification name="Acetylation" nTerminusOnly="true">
+    <effectsAnyNTerminus/>
+    <atomsAdded>
+      <contains atom="C" count="2"/>
+      <contains atom="H" count="2"/>
+      <contains atom="O" count="1"/>
+    </atomsAdded> 
+  </potentialModification>
+-->
+
+  <!-- lysine acetylation -->
+<!--
+  <potentialModification name="Acetylation">
+    <effects oneLetter="K"/>
+    <atomsAdded>
+      <contains atom="C" count="2"/>
+      <contains atom="H" count="2"/>
+      <contains atom="O" count="1"/>
+    </atomsAdded> 
+  </potentialModification>
+-->
+<!--
+  <potentialModification name="Carboxyamidomethylation(Lab Prepared)" required="true">
+    <effects oneLetter="C"/>
+    <atomsAdded>
+      <contains atom="H" count="3"/>
+      <contains atom="C" count="2"/>
+      <contains atom="N" count="1"/>
+      <contains atom="O" count="1"/>
+    </atomsAdded>  
+  </potentialModification>
+-->
+  <potentialModification name="Carboxymethylation(Lab Prepared)" required="true">
+    <effects oneLetter="C"/>
+    <atomsAdded>
+      <contains atom="H" count="2"/>
+      <contains atom="C" count="2"/>
+      <contains atom="O" count="2"/>
+    </atomsAdded>  
+  </potentialModification>
+
+  <potentialModification name="Deamidation">
+    <effects oneLetter="Q"/>
+    <effects oneLetter="N"/>
+    <atomsLost>
+      <contains atom="H" count="1"/>
+      <contains atom="N" count="1"/>
+    </atomsLost>  
+    <atomsAdded>
+      <contains atom="O" count="1"/>
+    </atomsAdded>  
+  </potentialModification>
+<!--
+  <potentialModification name="Formylation">
+    <effects oneLetter="S"/>
+    <effects oneLetter="T"/>
+    <effects oneLetter="Z"/>
+    <atomsAdded>
+      <contains atom="C" count="1"/>
+      <contains atom="O" count="1"/>
+    </atomsAdded>  
+  </potentialModification>
+-->
+<!--
+  <potentialModification name="Formylkynurenin">
+    <effects oneLetter="W"/>
+    <atomsAdded>
+      <contains atom="O" count="2"/>
+    </atomsAdded>  
+  </potentialModification>
+-->
+
+  <potentialModification name="Oxidation">
+    <effects oneLetter="M"/>
+    <effects oneLetter="H"/>
+    <effects oneLetter="W"/>
+    <atomsAdded>
+      <contains atom="O" count="1"/>
+    </atomsAdded>
+  </potentialModification>
+
+<!--
+  <potentialModification name="Phosphorylation">
+    <effects oneLetter="T"/>
+    <effects oneLetter="Y"/>
+    <effects oneLetter="S"/>
+    <atomsAdded>
+      <contains atom="H" count="1"/>
+      <contains atom="O" count="3"/>
+      <contains atom="P" count="1"/>
+    </atomsAdded>
+  </potentialModification>
+-->
+
+  <potentialModification name="Guanidination">
+    <effects oneLetter="K"/>
+    <atomsAdded>
+      <contains atom="H" count="2"/>
+      <contains atom="C" count="1"/>
+      <contains atom="N" count="2"/>
+    </atomsAdded>
+  </potentialModification>
+
+  <potentialModification name="N-Sulfination" nTerminusOnly="true">
+    <effectsAnyNTerminus/>
+    <atomsAdded>
+      <contains atom="H" count="4"/>
+      <contains atom="C" count="3"/>
+      <contains atom="S" count="1"/>
+      <contains atom="O" count="4"/>
+    </atomsAdded>
+  </potentialModification>
+
+<!--
+  <potentialModification name="N-Sulfination+Guanidination" nTerminusOnly="true">
+    <effects oneLetter="K"/>
+    <atomsAdded>
+      <contains atom="H" count="6"/>
+      <contains atom="C" count="4"/>
+      <contains atom="N" count="2"/>
+      <contains atom="S" count="1"/>
+      <contains atom="O" count="4"/>
+    </atomsAdded>
+  </potentialModification>
+-->
+
+  <potentialModification name="Pyro-glu from E" nTerminusOnly="true">
+    <effects oneLetter="E"/>
+    <atomsLost>
+      <contains atom="H" count="2"/>
+      <contains atom="O" count="1"/>
+    </atomsLost>
+  </potentialModification>
+
+  <potentialModification name="Pyro-glu from Q" nTerminusOnly="true">
+    <effects oneLetter="Q"/>
+    <atomsLost>
+      <contains atom="H" count="3"/>
+      <contains atom="N" count="1"/>
+    </atomsLost>
+  </potentialModification>
+<!--
+  <potentialModification name="Ubiquitinylation">
+    <effects oneLetter="K"/>
+    <atomsAdded>
+      <contains atom="H" count="6"/>
+      <contains atom="C" count="4"/>
+      <contains atom="N" count="2"/>
+      <contains atom="O" count="2"/>
+    </atomsAdded>
+  </potentialModification>
+-->
+</potentialModifications>
+
+ <!-- possible ion types to look for -->
+ <possible-ions>
+   <!-- TODO: reference immonium ions -->
+  <searchForImmoniums /> 
+   <!-- TODO: reference internals -->
+<!--   <searchForInternals /> -->
+   <!-- TODO: reference hydration -->
+<!--   <searchForHydration />-->
+  <!-- TODO: reference water loss -->
+<!--  <searchForWaterLoss /> -->
+  <!-- TODO: reference ammonia loss -->
+<!--  <searchForAmmoniaLoss /> -->
+  <!-- TODO: reference urea loss -->
+<!--  <searchForUreaLoss /> -->
+  <!-- TODO: reference poorly called mono-isotopic peaks -->
+<!--  <searchForPoorlyCalledMonoisotopicPeaks /> -->
+ 
+  <!-- TODO: reference standard ion types, switch these to entries similar to the above -->
+<!--
+   <ion name="A" addNTerminus="true">
+     <atomsLost>
+       <contains atom="C" count="1"/>
+       <contains atom="O" count="1"/>
+     </atomsLost>
+   </ion>
+-->
+   <ion name="B" addNTerminus="true" />
+   <!--
+   <ion name="C" addNTerminus="true">
+     <atomsAdded>
+       <contains atom="N" count="1"/>
+       <contains atom="H" count="3"/>
+     </atomsAdded>
+   </ion>
+   <ion name="X" addCTerminus="true">
+     <atomsAdded>
+       <contains atom="O" count="1"/>
+       <contains atom="C" count="1"/>
+     </atomsAdded>
+   </ion>
+-->
+   <ion name="Y" addCTerminus="true">
+     <atomsAdded>
+       <contains atom="H" count="2"/>
+     </atomsAdded>
+   </ion>
+<!--
+   <ion name="Z" addCTerminus="true">
+     <atomsLost>
+       <contains atom="N" count="1"/>
+       <contains atom="H" count="1"/>
+     </atomsLost>
+   </ion>
+ -->
+ </possible-ions>
+ 
+ <!-- mass accuracy for a machine ppm or daltons -->
+<!--
+<massErrorTolerance ppm="160"/>
+-->
+<massErrorTolerance ppm="500"/>
+
+ <!-- optional flagging of trypsin specificity -->
+<!-- <onlyConsiderTrypticPeptides />-->
+
+
+ <!-- optional flagging for sequence tag searching -->
+ <onlyConsiderFullPeptides />
+
+
+<!-- cache config info.
+  residues: the number of residues to cache. This makes
+    all possible combos of residues in this config file
+    up to the length given. Don't use more than 4, 2 is 
+    the default and it appears to work very well with
+    MALDI data.
+  daltons: The max daltons to cap cache enties at. If you
+    want to limit cache entries by their mass, use this
+    to set an upper cap.
+ -->
+ <cache residues="3"/>
+ 
+ <!-- should auto machine calibration be used? -->
+ <autoMachineCalibration enable="no" ppmWindow="1000"/>
+ 
+ <!-- simple cluster code test -->
+ <Cluster>
+   <SplitSearch ip="192.168.1.204" startPosition="0" endPosition="10000000" />
+   <SplitSearch ip="0.0.0.0" startPosition="10000000" endPosition="20000000" />
+ </Cluster>
+</model-config>

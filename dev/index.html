@@ -1,0 +1,75 @@
+<html>
+<head>
+  <title>PFSM Project - Fast tandem mass spectrometry protein identification regardless of the number of spectra or potential modifications examined.</title>
+</head>
+<body>
+<h1>Peptide Finite State Machine Project (Version 1.0, "The Paper was Published")</h1>
+<p>This project provides a free, open-source, Java implementation of a Peptide Finite State Machine (see Falkner, Andrews, <i>Fast tandem mass spectra-based protein identification regardless of the number of spectra or potential modifications examined</i>, Bioinformatics, 2005). The code may be used to quickly scan through protein sequences, e.g. any FASTA file, and matches subsequences to a peak list. PFSM are well suited for this task as they allow any number of potential modifications to be considered or any number of peak lists to be multiplexed without resulting in a longer search time.</p>
+<p>What the code does may seem like magic, but the technique used will be familiar to any computer scientist. If you convert mass spectra in to a single regular expression you can side-step almost all the bottle-necks of common mass spec search algorithms. It is slick, check out the code.</p>
+<ul>
+  <li><a href="#credits">Credits</a></li>
+  <li><a href="#contents">Contents of this archive</a></li>
+  <li><a href="#features">Features</a></li>
+  <li><a href="#changes">Changes</a></li>
+  <li><a href="#requirements">System Requirements</a></li>
+  <li><a href="#running">Running the code</a></li>
+  <li><a href="#license">Licensing Information</a></li>
+</ul>
+
+<h2><a name="credits">Credits</a></h2>
+<p>All the source-code and all the documentation were authored by Jayson Falkner, jfalkner@umich.edu. Partial support from the National Resource for Proteomics and Pathways, NRRP is acknowledged. Special thanks to the Phil Andrews lab at the University of Michigan, Ann Arbor, for all the support.</p>
+
+<h2><a name="features">Features</a></h2>
+<p>PFSMs may be used to quickly identify potential peptide sequences from a set of protein sequences very quickly, regardless of the number of peak lists you are searching or the number of potential modifications considered. This is the key feature of PFSMs and it is described well in the algorithm's paper. Other helpful features are summarized here.</p>
+<dl>
+  <di>Free and Open-Source</di>
+  <dd>This project is free to use, as stated in the license, and it is completely open-source. The goal is to give proteomics researches a good, open, free tool to use for MSMS-based protein identification.</dd>
+
+  <di>Cross Platform Compatability, Dynamic Code Updates</di>
+  <dd>All code in this project is implemented in the Java programming language, and it may be run on any platform supporting Java, including Linux, MS Windows, OSX, BSD, and Solaris. This project also uses Java Web Start to allow for dynamic web-based updates. You'll always automatically have free access to the latest version of the code.</dd>
+<!--
+  <di>Cluster Support</di>
+  <dd>Multiple computers may be used to perform a single search. The more computers one adds, the faster the search is performed.</dd>
+-->
+  <di>Database File Formats</di>
+  <dd>FASTA files may be used as input.</dd>
+
+  <di>Peak List/Spectra Formats</di>
+  <dd>This project is based on the ProteomeCommons.org-IO framework, and it supports many different MS and MSMS data file formats such as MGF, DTA, and PKL.</dd>
+</dl>
+
+<h2><a name="changes">Changes</a></h2>
+<ul>
+  <li>Everything is new, this is the first code release!</li>
+</ul>
+
+<h2><a name="contents">Contents of this archive</a></h2>
+<p>The following list provides a breakdown of the contents of this archive.</p>
+<ul>
+  <li><b>examples/</b>: some examples of using PFSMs to search for protein identifications. See <a href="examples/index.html">examples/index.html</a> for more information.</li>
+  <li><b>Falkner-PFSM.jar</b>: The Java binaries for the PFSM Project packaged in a JAR. Execute the code using "java -jar Falkner-PFSM.jar"</li>
+  <li><b>index.html</b>: this document</li>
+  <li><b>LICENSE.txt</b>: A copy of the Apache 2.0 license.</li>
+  <li><b>src/</b>: The Java source-code for this project.</li>
+</ul>
+<h2><a name="requirements"">Requirements</a></h2>
+<p>You will need a copy of the Java Runtime Environment (JRE) 1.4+ in order to run this project. A free copy of the JRE may be obtained at java.sun.com. There is no formal requirement on processor speed or RAM, but more of either will generally make things go faster.</p>
+
+<h2><a name"running">Running the code</a></h2>
+<p>In this beta release of the code is a utility that will construct a PFSM from a set of peak lists and use it to screen a FASTA file. An example is provided and it may be run by using the following command.</p>
+<pre>
+java -jar Falknew-PFSM.jar default-config.xml example.fasta peaklist-1.mgf peaklist-2.mgf peaklist-3.mgf peaklist-4.mgf
+</pre>
+<p>The program will examine the FASTA file <i>example.fasta</i> using the PFSM to pick out which fragments of a protein could satisfy the given peaklist. Results are displayed on the screen, sorted by showing proteins with the most peptides matched first.</p>
+<p>In general the code may be run by using the following command.</p>
+<pre>
+java -jar Falkner-PFSM.jar &lt;config file&gt; &lt;fasta file&gt; &lt;peak list file(s)&gt;
+</pre>
+<p>Where you replace the config file with your configuration (default-config.xml should be fine for TOFTOF data), the FASTA file with any FASTA file you please, and the peak lists files with any peak list files you may have.</p>
+
+<h2><a name="license">Licensing Information</a></h2>
+<p>The goal of this project is to provide free, open-source code that anyone may use as they please; However, everyting in this project is strictly licensed under the Apache 2.0 license. This protects the authors and contributors of this project, and it encourages fair use of the code. A copy of the Apache 2.0 license may be found on-line at <a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a> or as plain text in the LICENSE.txt file included in this archive.</p>
+<p>In addition to the Apache 2.0 license it is requested that any person or organization that uses the PFSM Project properly reference this project. In at least one public, appropriate place, please note that the "PFSM Project" is being used, and provide a URL to the proteomecommons.org copy of this archive.</p>
+
+</body>
+</html>
