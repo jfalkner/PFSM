@@ -28,9 +28,26 @@ If you aren't a science or CS person, then the explaination goes like this. Prot
 
 Here is a summary of how the algorithm works based on the images in the manuscript.
 
+First, consider that a tandem mass spectrum is based on a alphabet (amino acids). It is slightly confusing because the same word is repeated both forward and backward, but still just letters from an alphabet.
+
 ![Figure 1](figure-1.png)
+
+Next note that words are actually peptides. The amino acids that make up the peptide occasionally have combinations that end up ambiguous if you are working with spectrum masses. The solution is to consider all possibilities -- don't assume one is correct.
+
 ![Figure 2](figure-2.png)
+
+Another form of the ambiguous combination problem is cases where a spectrum lacks an expected peak. In these cases you must use multiple amino acids to fill the gap. If doing this, all permutations of the amino acids need be considered.
+
 ![Figure 3](figure-3.png)
+
+Once all spectra have been converted to graphs (NDFA) they can then be linked together as a single NDFA. This isn't yet helpful beyond setting us up for conversion of the NDFA to a single DFA that runs remarkably quickly.
+
 ![Figure 4](figure-4.png)
+
+Finally, the key step to getting fast performance. Conversion of NDFA to DFA. In other words, converting the graph(s) to a single state machine where for every state exactly one transition exists for every letter in the alphabet. Interestingly, this works the same if you are converting one word (a spectrum) or many (entire set of spectra).
+
 ![Figure 5](figure-5.png)
+
+Performance of testing this manuscript's implementation against real MS/MS data sets. It works and can handle lots of post translational modifications!
+
 ![Figure 6](figure-6.png)
