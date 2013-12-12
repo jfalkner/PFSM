@@ -22,5 +22,15 @@ protein data set–based protein identification.
 
 I've described this manuscript several times and often to people familiar with CS but not science and proteomics. An easy way to describe this in CS terms is that I implemented a regular expression based on masses in a tandem mass spectrum (MS/MS) instead of letters in an alphabet. The net benefit is that, like a regular expression, you can multiplex an arbitrary number of words (spectra in this case) and it searches in the same amount of time. 
 
-If you aren't a science or CS person, then the explaination is simpler. Protein analysis makes a few thousand scans per run. Modern software searches one at a time, which can take a long time. This algorithm searches everything in the same amount of time it takes to search one thing. It is really fast. Magic.
+If you aren't a science or CS person, then the explaination goes like this. Protein analysis makes a few thousand scans per run. Modern software searches one at a time, which can take a long time. This algorithm searches everything in the same amount of time it takes to search one thing. It is really fast. Magic.
 
+### How the algorithm works
+
+Here is a summary of how the algorithm works based on the images in the manuscript.
+
+![Figure 1](figure-1.png)
+![Figure 2](figure-2.png)
+![Figure 3](figure-3.png)
+![Figure 4](figure-4.png)
+![Figure 5](figure-5.png)
+![Figure 6](figure-6.png)
